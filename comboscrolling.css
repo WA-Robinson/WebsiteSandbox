@@ -1,0 +1,56 @@
+#scrolling1
+{
+	position: absolute;
+	left: 50px;
+	width: 600px;
+	height: 120px;
+	background-color: #ccc;
+	border: 1px solid green;
+	padding: 3px;
+	top: 50px;
+	overflow: hidden;
+}	
+.wrapper
+{
+	height: 70px;
+	background-color: #999;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	width: 0px;
+}
+
+.contents
+{
+	width: 50px;
+	height: 50px;
+	margin: 5px;
+	background-color: #333;
+	float: left;
+	color: #fff;	
+}
+
+.navigation
+{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 40px;
+	background: #666;
+	color: #FFF;
+	text-align: center;
+}
+	.navigation.previous
+	{
+		left: 0px;
+	}
+	.navigation.next
+	{
+		right: 0px;
+	}
+	.navigation.disabled
+	{
+		color: #ff0000;
+	}
+
+	
