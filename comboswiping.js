@@ -26,7 +26,7 @@ function Carousel(carouselElement){
 	}
 	function BuildNavigation()
 	{		
-		me.prevButton = AddNavButton("previous", $("<span>Prev</span>"), -1);
+		me.prevButton = AddNavButton("previous", $("<span>Prev</span>"), -1);		
 		me.nextButton = AddNavButton("next", $("<span>Next</span>"), 1);
 	}	
 	function AddNavButton(className, content, pagechange)
@@ -85,10 +85,10 @@ function Carousel(carouselElement){
 	function StartTouchSwipe(event)
 	{
 		me.xorigin = event.touches[0].pageX;
-		me.startmargin = parseInt(carousel.css("left"));
+		me.startmargin = parseInt(me.carousel.position().left);
 		document.getElementById(me.container.attr("id")).ontouchmove = TouchSwipe;
 		event.preventDefault();
-	}
+}
 	function TouchSwipe(event)
 	{
 		me.carousel.css("left", (me.startmargin + event.touches[0].pageX - me.xorigin) + "px");
@@ -99,5 +99,9 @@ function Carousel(carouselElement){
 		document.getElementById(me.container.attr("id")).ontouchmove = null;
 		ValidateNavigation();
 	}	
+	function IsTouchable()
+	{
+		
+	}
 };
 
